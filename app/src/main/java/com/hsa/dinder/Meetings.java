@@ -86,7 +86,7 @@ public class Meetings extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if (!isChecked) {
-                    if (ActivityCompat.checkSelfPermission(Meetings.this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(Meetings.this, Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED) {
                         // TODO: Consider calling
                         ActivityCompat.requestPermissions(Meetings.this, new String[]{Manifest.permission.BLUETOOTH_ADMIN},1);
                         // here to request the missing permissions, and then overriding
@@ -111,7 +111,7 @@ public class Meetings extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     Intent getVisible = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-                    if (ActivityCompat.checkSelfPermission(Meetings.this, Manifest.permission.BLUETOOTH_ADVERTISE) != PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(Meetings.this, Manifest.permission.BLUETOOTH_ADVERTISE) == PackageManager.PERMISSION_GRANTED) {
                         // TODO: Consider calling
                         //    ActivityCompat#requestPermissions
                         // here to request the missing permissions, and then overriding
@@ -121,9 +121,9 @@ public class Meetings extends AppCompatActivity {
                         // for ActivityCompat#requestPermissions for more details.
                         return;
                     }
-                    Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-                    startActivityForResult(intent , 1);
-                    //startActivityForResult(getVisible, 0);
+
+
+                    startActivityForResult(getVisible, 0);
                     showToast("Visible for 2min.");
                 }
             }
@@ -139,7 +139,7 @@ public class Meetings extends AppCompatActivity {
     }//////////// End of OnCreate
 
     private void list() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
