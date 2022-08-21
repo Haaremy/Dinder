@@ -13,7 +13,7 @@ import org.neo4j.driver.Config;
 
 import testPack.DBCom;
 
-public class Login extends AppCompatActivity {
+public class Login extends AppCompatActivity implements AsyncResponse {
 
     public String getMail(){
         EditText mail = findViewById(R.id.mail);
@@ -50,6 +50,7 @@ public class Login extends AppCompatActivity {
     public void sendData(){
         MyTask mytask = new MyTask();
         mytask.execute();
+        mytask.delegate= (AsyncResponse) this;
         System.out.println(mytask.getIsUser());
         if(mytask.getIsUser()){ // email & password sind korrekt
             openMyPage();
@@ -69,6 +70,7 @@ public class Login extends AppCompatActivity {
             return isUser;
         }
         String result;
+        public AsyncResponse delegate = null;
         @Override
         protected Void doInBackground(Void... voids) {
             String uri = "neo4j+s://0a1e255a.databases.neo4j.io:7687";
@@ -83,8 +85,8 @@ public class Login extends AppCompatActivity {
             return null;
         }
         @Override
-        protected void onPostExecute(Void aVoid) {
-
+        protected void onPostExecute(Boolean aVoid) {
+            delegate.processFinish(aVoid);
         }
 
 
