@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keeplogin">Login speichern?</string>
+    <string name="register1">Registrieren (1/2)</string>
+    <string name="meetings">Deine Matches:</string>
+    <string name="register2">Registrieren (2/2)</string>
+    <string name="registerF">Abschließen</string>
+    <string name="interest">#Interesse</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="visible">sichtbar</string>
+    <string name="enable">aktivieren</string>
+    <string name="cont">weiter</string>
+    <string name="noAccount">Noch kein Account?</string>
+    <string name="clearname">Nutzername</string>
+</resources>

@@ -1,17 +1,10 @@
-<resources>
-    <string name="app_name">Finder</string>
-    <string name="email_de">E-Mail</string>
-    <string name="password_de">Passwort</string>
-    <string name="login_de">Login</string>
-    <string name="continue_de">weiter</string>
-    <string name="keeplogin_de">Login speichern?</string>
-    <string name="register1_de">Registrieren (1/2)</string>
-    <string name="meetings_de">Deine Matches:</string>
-    <string name="register2_de">Registrieren (2/2)</string>
-    <string name="registerF_de">Abschließen</string>
-    <string name="interest_de">#Interesse</string>
-    <string name="title_activity_my_page">MyPage</string>
-    <string name="large_text">
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">Finder</string>
+    <string name="email" translatable="false">E-Mail</string>
+    <string name="password" translatable="false">Passwort</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="title_activity_my_page" translatable="false">MyPage</string>
+    <string name="large_text" translatable="false">
         "Material is the metaphor.\n\n"
 
         "A material metaphor is the unifying theory of a rationalized space and a system of motion."
@@ -100,5 +93,17 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="keeplogin">Keep Login?</string>
+    <string name="register1">Register 1/2</string>
+    <string name="meetings">Your matches:</string>
+    <string name="register2">Register 1/2</string>
+    <string name="registerF">Finish</string>
+    <string name="interest">#interrests</string>
     <string name="action_settings">Settings</string>
+    <string name="visible">visible</string>
+    <string name="enable">enable</string>
+    <string name="cont">continue</string>
+    <string name="noAccount">No Account yet?</string>
+    <string name="nick" translatable="false">Nickname</string>
+    <string name="clearname">Clearname</string>
 </resources>
