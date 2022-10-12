@@ -41,15 +41,15 @@
         <activity
             android:name=".Register2"
             android:exported="true"
-            android:label="@string/register2_de" />
+            android:label="@string/register2" />
         <activity
             android:name=".Register1"
             android:exported="true"
-            android:label="@string/register1_de" />
+            android:label="@string/register1" />
         <activity
             android:name=".Login"
             android:exported="true"
-            android:label="@string/login_de" />
+            android:label="@string/login" />
         <activity
             android:name=".TitleScreen"
             android:exported="true"
